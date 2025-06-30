@@ -140,3 +140,4 @@ C:\Users\Bilal\Desktop\asp.netCore\CarBookApp\Presentation\CarBookApp.WebApi\obj
 C:\Users\Bilal\Desktop\asp.netCore\CarBookApp\Presentation\CarBookApp.WebApi\obj\Debug\net8.0\ref\CarBookApp.WebApi.dll
 C:\Users\Bilal\Desktop\asp.netCore\CarBookApp\Presentation\CarBookApp.WebApi\bin\Debug\net8.0\Application.dll
 C:\Users\Bilal\Desktop\asp.netCore\CarBookApp\Presentation\CarBookApp.WebApi\bin\Debug\net8.0\Application.pdb
+C:\Users\Bilal\Desktop\asp.netCore\CarBookApp\Presentation\CarBookApp.WebApi\obj\Debug\net8.0\CarBookApp.WebApi.sourcelink.json

@@ -17,3 +17,4 @@ C:\Users\Bilal\Desktop\asp.netCore\CarBookApp\Infrastructure\CarBookApp.Persiste
 C:\Users\Bilal\Desktop\asp.netCore\CarBookApp\Infrastructure\CarBookApp.Persistence\obj\Debug\net8.0\ref\CarBookApp.Persistence.dll
 C:\Users\Bilal\Desktop\asp.netCore\CarBookApp\Infrastructure\CarBookApp.Persistence\bin\Debug\net8.0\Application.dll
 C:\Users\Bilal\Desktop\asp.netCore\CarBookApp\Infrastructure\CarBookApp.Persistence\bin\Debug\net8.0\Application.pdb
+C:\Users\Bilal\Desktop\asp.netCore\CarBookApp\Infrastructure\CarBookApp.Persistence\obj\Debug\net8.0\CarBookApp.Persistence.sourcelink.json
