@@ -1,6 +1,6 @@
-﻿using Application.Features.Commands.CategoryCommands;
-using Application.Features.Handlers.CategoryHandlers;
-using Application.Features.Queries.CategoryQueries;
+﻿using Application.Features.CQRS.Commands.CategoryCommands;
+using Application.Features.CQRS.Handlers.CategoryHandlers;
+using Application.Features.CQRS.Queries.CategoryQueries;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

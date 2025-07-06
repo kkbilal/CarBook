@@ -1,11 +1,11 @@
-using Application.Features.Handlers.AboutHandlers;
-using Application.Features.Handlers.BannerHandlers;
-using Application.Features.Handlers.BrandHandlers;
-using Application.Features.Handlers.CarHandlers;
-using Application.Features.Handlers.CategoryHandlers;
-using Application.Features.Handlers.ContactHandlers;
+using Application.Features.CQRS.Handlers.AboutHandlers;
+using Application.Features.CQRS.Handlers.BannerHandlers;
+using Application.Features.CQRS.Handlers.BrandHandlers;
+using Application.Features.CQRS.Handlers.CarHandlers;
+using Application.Features.CQRS.Handlers.CategoryHandlers;
+using Application.Features.CQRS.Handlers.ContactHandlers;
 using Application.Interfaces;
-
+using Application.Services;
 using CarBookApp.Persistence.Context;
 using CarBookApp.Persistence.Repositories;
 using Microsoft.Extensions.DependencyInjection;
@@ -54,6 +54,7 @@ builder.Services.AddScoped<GetContactByIdQueryHandler>();
 builder.Services.AddScoped<UpdateContactCommandHandler>();
 builder.Services.AddScoped<RemoveContactCommandHandler>();
 
+builder.Services.AddApplicationServices(builder.Configuration);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

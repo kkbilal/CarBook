@@ -1,7 +1,7 @@
-﻿using Application.Features.Commands.BrandCommands;
+﻿using Application.Features.CQRS.Commands.BrandCommands;
+using Application.Features.CQRS.Handlers.BrandHandlers;
+using Application.Features.CQRS.Queries.BrandQueries;
 
-using Application.Features.Handlers.BrandHandlers;
-using Application.Features.Queries.BrandQueries;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

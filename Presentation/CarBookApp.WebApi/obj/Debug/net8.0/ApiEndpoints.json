@@ -19,7 +19,7 @@
     "Parameters": [
       {
         "Name": "command",
-        "Type": "Application.Features.Commands.AboutCommands.CreateAboutCommand",
+        "Type": "Application.Features.CQRS.Commands.AboutCommands.CreateAboutCommand",
         "IsRequired": true
       }
     ],
@@ -35,7 +35,7 @@
     "Parameters": [
       {
         "Name": "command",
-        "Type": "Application.Features.Commands.AboutCommands.UpdateAboutCommand",
+        "Type": "Application.Features.CQRS.Commands.AboutCommands.UpdateAboutCommand",
         "IsRequired": true
       }
     ],
@@ -93,7 +93,7 @@
     "Parameters": [
       {
         "Name": "command",
-        "Type": "Application.Features.Commands.BannerCommands.CreateBannerCommand",
+        "Type": "Application.Features.CQRS.Commands.BannerCommands.CreateBannerCommand",
         "IsRequired": true
       }
     ],
@@ -109,7 +109,7 @@
     "Parameters": [
       {
         "Name": "command",
-        "Type": "Application.Features.Commands.BannerCommands.UpdateBannerCommand",
+        "Type": "Application.Features.CQRS.Commands.BannerCommands.UpdateBannerCommand",
         "IsRequired": true
       }
     ],
@@ -167,7 +167,7 @@
     "Parameters": [
       {
         "Name": "command",
-        "Type": "Application.Features.Commands.BrandCommands.CreateBrandCommand",
+        "Type": "Application.Features.CQRS.Commands.BrandCommands.CreateBrandCommand",
         "IsRequired": true
       }
     ],
@@ -183,7 +183,7 @@
     "Parameters": [
       {
         "Name": "command",
-        "Type": "Application.Features.Commands.BrandCommands.UpdateBrandCommand",
+        "Type": "Application.Features.CQRS.Commands.BrandCommands.UpdateBrandCommand",
         "IsRequired": true
       }
     ],
@@ -241,7 +241,7 @@
     "Parameters": [
       {
         "Name": "command",
-        "Type": "Application.Features.Commands.CarCommands.CreateCarCommand",
+        "Type": "Application.Features.CQRS.Commands.CarCommands.CreateCarCommand",
         "IsRequired": true
       }
     ],
@@ -257,7 +257,7 @@
     "Parameters": [
       {
         "Name": "command",
-        "Type": "Application.Features.Commands.CarCommands.UpdateCarCommand",
+        "Type": "Application.Features.CQRS.Commands.CarCommands.UpdateCarCommand",
         "IsRequired": true
       }
     ],
@@ -325,7 +325,7 @@
     "Parameters": [
       {
         "Name": "command",
-        "Type": "Application.Features.Commands.CategoryCommands.CreateCategoryCommand",
+        "Type": "Application.Features.CQRS.Commands.CategoryCommands.CreateCategoryCommand",
         "IsRequired": true
       }
     ],
@@ -341,7 +341,7 @@
     "Parameters": [
       {
         "Name": "command",
-        "Type": "Application.Features.Commands.CategoryCommands.UpdateCategoryCommand",
+        "Type": "Application.Features.CQRS.Commands.CategoryCommands.UpdateCategoryCommand",
         "IsRequired": true
       }
     ],
@@ -399,7 +399,7 @@
     "Parameters": [
       {
         "Name": "command",
-        "Type": "Application.Features.Commands.ContactCommands.CreateContactCommand",
+        "Type": "Application.Features.CQRS.Commands.ContactCommands.CreateContactCommand",
         "IsRequired": true
       }
     ],
@@ -415,7 +415,7 @@
     "Parameters": [
       {
         "Name": "command",
-        "Type": "Application.Features.Commands.ContactCommands.UpdateContactCommand",
+        "Type": "Application.Features.CQRS.Commands.ContactCommands.UpdateContactCommand",
         "IsRequired": true
       }
     ],
@@ -441,6 +441,470 @@
     "ContainingType": "CarBookApp.WebApi.Controllers.ContactsController",
     "Method": "RemoveContact",
     "RelativePath": "api/Contacts/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.FeaturesController",
+    "Method": "GetAllFeatures",
+    "RelativePath": "api/Features",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.FeaturesController",
+    "Method": "CreateFeature",
+    "RelativePath": "api/Features",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Application.Features.MediatR.Commands.FeatureCommands.CreateFeatureCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.FeaturesController",
+    "Method": "UpdateFeature",
+    "RelativePath": "api/Features",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Application.Features.MediatR.Commands.FeatureCommands.UpdateFeatureCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.FeaturesController",
+    "Method": "GetFeatureById",
+    "RelativePath": "api/Features/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.FeaturesController",
+    "Method": "RemoveFeature",
+    "RelativePath": "api/Features/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.FootersController",
+    "Method": "GetFooterAsync",
+    "RelativePath": "api/Footers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.FootersController",
+    "Method": "CreateFooterAsync",
+    "RelativePath": "api/Footers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Application.Features.MediatR.Commands.FooterCommands.CreateFooterCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.FootersController",
+    "Method": "GetFooterByIdAsync",
+    "RelativePath": "api/Footers/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.FootersController",
+    "Method": "UpdateFooterAsync",
+    "RelativePath": "api/Footers/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "Application.Features.MediatR.Commands.FooterCommands.UpdateFooterCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.FootersController",
+    "Method": "RemoveFooterAsync",
+    "RelativePath": "api/Footers/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.LocationsController",
+    "Method": "CreateLocation",
+    "RelativePath": "api/Locations/CreateLocation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Application.Features.MediatR.Commands.LocationCommands.CreateLocationCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.LocationsController",
+    "Method": "DeleteLocation",
+    "RelativePath": "api/Locations/DeleteLocation/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.LocationsController",
+    "Method": "GetLocationById",
+    "RelativePath": "api/Locations/GetLocationById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.LocationsController",
+    "Method": "GetLocations",
+    "RelativePath": "api/Locations/GetLocations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.LocationsController",
+    "Method": "UpdateLocation",
+    "RelativePath": "api/Locations/UpdateLocation",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Application.Features.MediatR.Commands.LocationCommands.UpdateLocationCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.PricingsController",
+    "Method": "GetPricings",
+    "RelativePath": "api/Pricings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.PricingsController",
+    "Method": "CreatePricing",
+    "RelativePath": "api/Pricings",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Application.Features.MediatR.Commands.PricingCommands.CreatePricingCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.PricingsController",
+    "Method": "GetPricingById",
+    "RelativePath": "api/Pricings/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.PricingsController",
+    "Method": "UpdatePricing",
+    "RelativePath": "api/Pricings/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "Application.Features.MediatR.Commands.PricingCommands.UpdatePricingCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.PricingsController",
+    "Method": "DeletePricing",
+    "RelativePath": "api/Pricings/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.ServicesController",
+    "Method": "GetServices",
+    "RelativePath": "api/Services",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.ServicesController",
+    "Method": "CreateService",
+    "RelativePath": "api/Services",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Application.Features.MediatR.Commands.ServiceCommands.CreateServiceCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.ServicesController",
+    "Method": "GetServiceById",
+    "RelativePath": "api/Services/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.ServicesController",
+    "Method": "UpdateService",
+    "RelativePath": "api/Services/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "Application.Features.MediatR.Commands.ServiceCommands.UpdateServiceCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.ServicesController",
+    "Method": "DeleteService",
+    "RelativePath": "api/Services/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.SocialMediasController",
+    "Method": "GetSocialMedias",
+    "RelativePath": "api/SocialMedias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.SocialMediasController",
+    "Method": "CreateSocialMedia",
+    "RelativePath": "api/SocialMedias",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Application.Features.MediatR.Commands.SocialMediaCommands.CreateSocialMediaCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.SocialMediasController",
+    "Method": "GetSocialMediaById",
+    "RelativePath": "api/SocialMedias/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.SocialMediasController",
+    "Method": "UpdateSocialMedia",
+    "RelativePath": "api/SocialMedias/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "Application.Features.MediatR.Commands.SocialMediaCommands.UpdateSocialMediaCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBookApp.WebApi.Controllers.SocialMediasController",
+    "Method": "DeleteSocialMedia",
+    "RelativePath": "api/SocialMedias/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
